@@ -3,178 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoorv Mehrotra - Senior Data Engineer Portfolio</title>
+    <title>Apoorv Mehrotra - Data Engineer Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #2d3748; /* Dark gray text */
         }
-        .section-title {
-            border-left: 4px solid #3b82f6; /* Blue border for titles */
-            padding-left: 1rem;
+        .container-main {
+            max-width: 960px; /* Slightly wider container */
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Green gradient */
+        }
+        .section-header {
+            @apply text-3xl font-bold text-gray-800 mb-6 relative pb-3;
+        }
+        .section-header::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-16 h-1 bg-teal-500 rounded-full;
         }
         .card {
-            background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
-            padding: 1.5rem;
+            @apply bg-white p-8 rounded-xl shadow-lg mb-10;
         }
         .highlight {
-            font-weight: 600; /* Semi-bold for keywords */
-            color: #1d4ed8; /* Darker blue for highlights */
+            @apply font-semibold text-teal-700;
+        }
+        .skill-category {
+            @apply text-xl font-semibold text-gray-700 mb-3;
+        }
+        .job-title-container {
+            @apply flex justify-between items-center cursor-pointer py-2 -mx-2 px-2 rounded-md hover:bg-gray-50 transition-colors duration-200;
+        }
+        .job-title {
+            @apply text-2xl font-bold text-gray-900;
+        }
+        .company-info {
+            @apply text-teal-600 text-lg mb-1;
+        }
+        .job-duration {
+            @apply text-gray-500 text-sm;
+        }
+        .bullet-point {
+            @apply list-disc list-inside mb-2 text-gray-700 leading-relaxed;
+        }
+        .cert-item {
+            @apply text-lg text-gray-700;
+        }
+        .plus-minus-icon {
+            @apply text-gray-600 text-2xl font-bold;
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
+<body class="antialiased">
+    <div class="container-main mx-auto px-4 py-12">
 
-        <header class="text-center mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Apoorv Mehrotra</h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-4">Senior Data Engineer</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <span class="text-blue-600 hover:underline">apoorv.mehrotra.am@gmail.com</span>
-                <span class="text-gray-700">+91-7060368478</span>
-                <span class="text-gray-700">India</span>
+        <header class="text-center mb-16 p-8 header-bg text-white rounded-xl shadow-xl">
+            <h1 class="text-5xl font-extrabold mb-3 tracking-tight">Apoorv Mehrotra</h1>
+            <p class="text-2xl font-light mb-6 opacity-90">Senior Data Engineer</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-8 text-lg mb-6">
+                <span class="flex items-center">
+                    <span class="mr-2">📧</span> apoorv.mehrotra.am@gmail.com
+                </span>
+                <span class="flex items-center">
+                    <span class="mr-2">📞</span> +91-7060368478
+                </span>
+                <span class="flex items-center">
+                    <span class="mr-2">📍</span> India
+                </span>
             </div>
+            <button id="downloadResumeBtn" class="bg-white text-teal-700 font-semibold py-2 px-6 rounded-full shadow-md hover:bg-gray-100 transition-colors duration-200 text-base">
+                Download Resume (HTML)
+            </button>
         </header>
 
-        <section class="mb-10 card">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Professional Summary</h2>
-            <p class="text-gray-700 leading-relaxed">
+        <section class="card">
+            <h2 class="section-header">Professional Summary</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
                 Highly experienced Senior Data Engineer with <span class="highlight">6.5+ years of expertise</span> in designing, building, and optimizing scalable data solutions. Proficient in <span class="highlight">Python</span>, <span class="highlight">PySpark</span>, and <span class="highlight">SQL</span>, leveraging the full <span class="highlight">Azure Data Engineering Stack</span>, including <span class="highlight">Databricks</span>, <span class="highlight">Databricks Workflows</span>, and <span class="highlight">Azure Data Factory (ADF)</span>. Proven track record of delivering end-to-end data engineering and analytical solutions, with a strong focus on performance optimization and architectural best practices for product-based companies and leading captive units.
             </p>
         </section>
 
-        <section class="mb-10 card">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
+        <section class="card">
+            <h2 class="section-header">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8">
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Programming Languages:</h3>
-                    <p>Python, PySpark, SQL, Flask</p>
+                    <h3 class="skill-category">Programming Languages:</h3>
+                    <p class="text-gray-700">Python, PySpark, SQL, Flask</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Big Data Technologies:</h3>
-                    <p>Apache Spark, Databricks, Delta Lake</p>
+                    <h3 class="skill-category">Big Data Technologies:</h3>
+                    <p class="text-gray-700">Apache <span class="highlight">Spark</span>, <span class="highlight">Databricks</span>, Delta Lake</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Cloud Platforms & Services:</h3>
-                    <p>Microsoft Azure (<span class="highlight">Azure Data Engineering Stack</span>), <span class="highlight">Azure Data Factory (ADF)</span>, Azure Logic Apps, Azure Synapse Analytics, Azure Functions, Azure Queues, Azure Redis</p>
+                    <h3 class="skill-category">Cloud Platforms & Services:</h3>
+                    <p class="text-gray-700">Microsoft <span class="highlight">Azure (Azure Data Engineering Stack)</span>, <span class="highlight">Azure Data Factory (ADF)</span>, Azure Logic Apps, Azure Synapse Analytics, Azure Functions, Azure Queues, Azure Redis</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Databases:</h3>
-                    <p>PostgreSQL, Snowflake</p>
+                    <h3 class="skill-category">Databases:</h3>
+                    <p class="text-gray-700">PostgreSQL, Snowflake</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Orchestration & ETL:</h3>
-                    <p><span class="highlight">Azure Data Factory (ADF)</span>, <span class="highlight">Databricks Workflows</span></p>
+                    <h3 class="skill-category">Orchestration & ETL:</h3>
+                    <p class="text-gray-700"><span class="highlight">Azure Data Factory (ADF)</span>, <span class="highlight">Databricks Workflows</span></p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Version Control:</h3>
-                    <p>Git</p>
+                    <h3 class="skill-category">Version Control:</h3>
+                    <p class="text-gray-700">Git</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-1">Methodologies:</h3>
-                    <p>Agile</p>
+                    <h3 class="skill-category">Methodologies:</h3>
+                    <p class="text-gray-700">Agile</p>
                 </div>
             </div>
         </section>
 
-        <section class="mb-10 card">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6 section-title">Experience</h2>
+        <section class="card">
+            <h2 class="section-header">Experience</h2>
 
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-900">Data Engineer</h3>
-                <p class="text-blue-600">Tiger Analytics | Remote (Base Office: Chennai, Tamil Nadu)</p>
-                <p class="text-gray-500 text-sm mb-4">August 2022 – Present</p>
-
-                <div class="mb-4">
-                    <h4 class="font-medium text-gray-800 mb-2">Asset and Investment Management</h4>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Architected and executed migration of legacy codebase to a <span class="highlight">Spark</span>-based Portfolio Management Tool on <span class="highlight">Databricks</span> and <span class="highlight">Azure cloud</span>, enhancing platform scalability and maintainability by <span class="font-bold">30%</span> and reducing operational costs.</li>
-                        <li>Optimized Batch Job Time from 7 days in legacy to 2.5 hrs. in <span class="highlight">Spark</span> product, achieving a <span class="font-bold">96% reduction</span> in processing time.</li>
-                        <li>Owned the creation of <span class="highlight">Databricks Workflows</span> and <span class="highlight">Azure Data Factory (ADF)</span> pipelines to orchestrate end-to-end monthly calculation processes, from data ingestion (FactSet) to output (Snowflake, <span class="highlight">Delta tables</span>), ensuring timely delivery for fixed income portfolios.</li>
-                        <li>Led the structuring of codebase for reusability and adherence to industry standards, improving development efficiency and maintainability for future projects.</li>
-                        <li>Implemented robust back-testing frameworks for multiple strategies using Factory Method design patterns, enhancing the flexibility and adaptability of the Research Platform to evolving requirements.</li>
-                        <li>Streamlined data flow, migrating <span class="font-bold">5TB</span> of raw data to curated <span class="highlight">Delta tables</span> (part of <span class="highlight">Azure Data Engineering Stack</span>), improving data accessibility and analytics readiness for <span class="font-bold">5+</span> downstream teams.</li>
-                        <li>Directed application functionality post-migration from Azure 3 to Azure 4 based platforms, ensuring seamless transition and operational continuity.</li>
-                    </ul>
+            <div class="mb-8 pb-6 border-b border-gray-200 last:border-b-0">
+                <div class="job-title-container" data-target="tiger-analytics-details">
+                    <div>
+                        <h3 class="job-title">Data Engineer</h3>
+                        <p class="company-info">Tiger Analytics | Remote (Base Office: Chennai, Tamil Nadu)</p>
+                        <p class="job-duration">August 2022 – Present</p>
+                    </div>
+                    <span class="plus-minus-icon">+</span>
                 </div>
-
-                <div class="mb-4">
-                    <h4 class="font-medium text-gray-800 mb-2">Portfolio Management</h4>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Sourced and integrated diverse datasets from multiple sources including FactSet, Sustainalytics, and user uploads, enabling comprehensive portfolio analysis.</li>
-                        <li>Developed scalable <span class="highlight">Azure Functions</span> with <span class="highlight">Spark</span> and <span class="highlight">Python</span> to retrieve and persist data into databases, executing complex business logic calculations with high accuracy.</li>
-                        <li>Architected and deployed a highly scalable framework utilizing <span class="highlight">Azure Queues</span> and diverse <span class="highlight">Virtual Machines</span> within the <span class="highlight">Azure Data Engineering Stack</span>, reducing data processing latency by <span class="font-bold">40%</span> and enhancing user experience.</li>
-                        <li>Leveraged <span class="highlight">Azure Redis</span> for caching currency conversion data, optimizing <span class="highlight">Azure Functions</span> response time by <span class="font-bold">20%</span> for critical user actions.</li>
-                        <li>Processed <span class="font-bold">20+ years</span> of historical data using <span class="highlight">Spark</span> within a Pandas Fast API setup, enabling rapid analytical queries and insights.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-medium text-gray-800 mb-2">Telecom</h4>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Developed a metadata-driven automated reconciliation framework using <span class="highlight">PySpark</span> on <span class="highlight">Databricks</span> and <span class="highlight">Azure Synapse</span>, improving data quality assurance by <span class="font-bold">25%</span> and reducing manual validation efforts.</li>
-                        <li>Designed and developed <span class="highlight">PySpark</span> scripts for efficient data extraction from PowerBI into <span class="highlight">Databricks</span>, facilitating robust data aggregation and comparison processes.</li>
-                        <li>Developed an automated Data Quality framework to monitor and validate KPI values across <span class="highlight">Databricks</span> and <span class="highlight">Azure Synapse</span>, ensuring data reliability for critical business metrics.</li>
-                        <li>Created <span class="highlight">Databricks notebooks</span> to orchestrate and trigger aggregation and comparison scripts, packaged as reusable <span class="highlight">Python</span> modules, streamlining data validation workflows.</li>
-                        <li>Designed and developed robust <span class="highlight">Azure Data Factory (ADF)</span> pipelines, automating daily and ad-hoc reconciliation flows and improving data delivery efficiency by <span class="font-bold">15%</span>.</li>
-                        <li>Designed and implemented <span class="highlight">Azure Logic Apps</span> to automate the generation and delivery of email notifications containing reconciliation and Data Quality results, enhancing stakeholder communication.</li>
+                <div id="tiger-analytics-details" class="hidden mt-4">
+                    <ul class="space-y-2 text-base">
+                        <li class="bullet-point"><span class="highlight">Architected</span> and <span class="highlight">executed migration</span> of legacy codebase to a <span class="highlight">Spark</span>-based Portfolio Management Tool on <span class="highlight">Databricks</span> and <span class="highlight">Azure cloud</span>, enhancing platform scalability and maintainability by <span class="font-bold">30%</span> and reducing operational costs.</li>
+                        <li class="bullet-point"><span class="highlight">Optimized</span> Batch Job Time from 7 days in legacy to 2.5 hrs. in <span class="highlight">Spark</span> product, achieving a <span class="font-bold">96% reduction</span> in processing time.</li>
+                        <li class="bullet-point"><span class="highlight">Owned the creation</span> of <span class="highlight">Databricks Workflows</span> and <span class="highlight">Azure Data Factory (ADF)</span> pipelines to orchestrate end-to-end monthly calculation processes (from data fetching from FactSet Screens to Writing Output to Snowflake and Delta tables) for fixed income portfolios.</li>
+                        <li class="bullet-point"><span class="highlight">Led the structuring</span> of codebase for reusability and adherence to industry standards, improving development efficiency and maintainability for future projects.</li>
+                        <li class="bullet-point"><span class="highlight">Implemented</span> robust back-testing frameworks for multiple strategies using Factory Method design patterns to cater to changing needs of Research Platform.</li>
+                        <li class="bullet-point"><span class="highlight">Streamlined</span> data flow, migrating <span class="font-bold">5TB</span> of raw data to curated <span class="highlight">Delta tables</span> (part of <span class="highlight">Azure Data Engineering Stack</span>), improving data accessibility and analytics readiness for <span class="font-bold">5+</span> downstream teams.</li>
+                        <li class="bullet-point"><span class="highlight">Directed</span> application functionality post-migration from Azure 3 to Azure 4 based platforms, ensuring seamless transition and operational continuity.</li>
+                        <li class="bullet-point"><span class="highlight">Sourced</span> and integrated diverse datasets from multiple sources (FactSet, Sustainalytics, User Uploads), enabling comprehensive portfolio analysis.</li>
+                        <li class="bullet-point"><span class="highlight">Created</span> several <span class="highlight">Azure Functions</span> along with <span class="highlight">Spark</span> and <span class="highlight">Python</span> to retrieve data and save it to a database, performing complex business logic calculations.</li>
+                        <li class="bullet-point"><span class="highlight">Architected</span> and <span class="highlight">deployed</span> a highly scalable framework utilizing <span class="highlight">Azure Queues</span> and diverse Virtual Machines within the <span class="highlight">Azure Data Engineering Stack</span>, reducing data processing latency by <span class="font-bold">40%</span> and enhancing user experience.</li>
+                        <li class="bullet-point"><span class="highlight">Leveraged</span> <span class="highlight">Azure Redis</span> for caching currency conversion data, optimizing <span class="highlight">Azure Functions</span> response time by <span class="font-bold">20%</span> for critical user actions.</li>
+                        <li class="bullet-point"><span class="highlight">Used Spark</span> to process historical data of up to <span class="font-bold">20 years</span> in a Pandas Fast API Setup, enabling rapid analytical queries and insights.</li>
+                        <li class="bullet-point"><span class="highlight">Developed</span> a metadata-driven automated reconciliation framework using <span class="highlight">PySpark</span> on <span class="highlight">Databricks</span> and <span class="highlight">Azure Synapse</span>, improving data quality assurance by <span class="font-bold">25%</span> and reducing manual validation efforts.</li>
+                        <li class="bullet-point"><span class="highlight">Designed</span> and <span class="highlight">developed PySpark</span> scripts for efficient data extraction from PowerBI into <span class="highlight">Databricks</span>, facilitating robust data aggregation and comparison processes.</li>
+                        <li class="bullet-point"><span class="highlight">Developed</span> automated Data Quality framework to monitor and validate KPI values across <span class="highlight">Databricks</span> and <span class="highlight">Azure Synapse</span>, ensuring data reliability for critical business metrics.</li>
+                        <li class="bullet-point"><span class="highlight">Created Databricks notebooks</span> to orchestrate and trigger aggregation and comparison scripts prepared as part of a reusable <span class="highlight">Python</span> package, streamlining data validation workflows.</li>
+                        <li class="bullet-point"><span class="highlight">Designed</span> and <span class="highlight">developed</span> robust <span class="highlight">Azure Data Factory (ADF)</span> pipelines, automating daily and ad-hoc reconciliation flows and improving data delivery efficiency by <span class="font-bold">15%</span>.</li>
+                        <li class="bullet-point"><span class="highlight">Designed</span> and <span class="highlight">implemented Azure Logic Apps</span> to automate the generation and delivery of email notifications containing reconciliation and Data Quality results, enhancing stakeholder communication.</li>
                     </ul>
                 </div>
             </div>
 
-            <div>
-                <h3 class="text-xl font-semibold text-gray-900">Backend Developer</h3>
-                <p class="text-blue-600">Tata Consultancy Services | Bengaluru, Karnataka</p>
-                <p class="text-gray-500 text-sm mb-4">December 2018 – August 2022</p>
-
-                <div class="mb-4">
-                    <h4 class="font-medium text-gray-800 mb-2">Customer Analytics - Domain Agnostic Analytics Solution</h4>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Spearheaded backend development for a <span class="highlight">Big Data Analytics</span> solution using <span class="highlight">PySpark</span>, <span class="highlight">Flask</span>, and <span class="highlight">SQL</span>, which won the <span class="font-bold">CII DX Awards 2021</span> for Best Practice in Customer Experience, impacting <span class="font-bold">100K+</span> customers.</li>
-                        <li>Developed high-performance <span class="highlight">REST APIs</span> using <span class="highlight">Flask</span> to facilitate real-time data access and implemented efficient data aggregation techniques for analytical solutions.</li>
-                        <li>Utilized <span class="highlight">PySpark</span> to implement K-means clustering for customer segmentation and applied advanced forecasting techniques (Moving Average, Simple Exponential Smoothing, Holt’s Linear) to predict future Customer Experience Scores, enhancing predictive accuracy by <span class="font-bold">10%</span>.</li>
-                        <li>Ensured code quality and reliability by creating comprehensive unit tests using `pytest` and conducting thorough API testing with Postman.</li>
-                        <li>Managed version control with <span class="highlight">Git</span> and collaborated extensively with architects to translate complex business requirements into robust API designs and implementations.</li>
-                        <li>Played a pivotal role in the successful completion of the initial two Minimum Viable Products (MVPs), providing end-to-end support and participating in product demonstrations for intellectual property and regulatory clearances.</li>
-                    </ul>
+            <div class="mb-8 pb-6 last:border-b-0">
+                <div class="job-title-container" data-target="tcs-details">
+                    <div>
+                        <h3 class="job-title">Backend Developer</h3>
+                        <p class="company-info">Tata Consultancy Services | Bengaluru, Karnataka</p>
+                        <p class="job-duration">December 2018 – August 2022</p>
+                    </div>
+                    <span class="plus-minus-icon">+</span>
                 </div>
-
-                <div>
-                    <h4 class="font-medium text-gray-800 mb-2">Credit Risk - Banking</h4>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Engineered and optimized <span class="highlight">Python</span> programs for credit risk calculation, improving model accuracy by <span class="font-bold">10%</span> and reducing processing time by <span class="font-bold">5 hours</span> per run.</li>
-                        <li>Implemented complex calculation sequences to accurately determine probability of default and credit risk, supporting critical financial assessments.</li>
-                        <li>Facilitated seamless and secure data transitions between cross-functional teams, ensuring data consistency and accessibility.</li>
-                        <li>Upgraded server infrastructure to utilize LFTP protocol, enhancing security and efficiency of file transfers.</li>
-                        <li>Operated effectively within an Agile development environment, providing comprehensive end-to-end support for data solutions.</li>
+                <div id="tcs-details" class="hidden mt-4">
+                    <ul class="space-y-2">
+                        <li class="bullet-point"><span class="highlight">Spearheaded</span> backend development for a Big Data Analytics solution using <span class="highlight">PySpark</span>, <span class="highlight">Flask</span>, and <span class="highlight">SQL</span>, which won the <span class="font-bold">CII DX Awards 2021</span> for Best Practice in the Customer Experience Category, impacting <span class="font-bold">100K+</span> customers.</li>
+                        <li class="bullet-point"><span class="highlight">Developed</span> high-performance REST APIs using <span class="highlight">Flask</span> to facilitate real-time data access and <span class="highlight">implemented</span> efficient data aggregation techniques for analytical solutions.</li>
+                        <li class="bullet-point"><span class="highlight">Utilized PySpark</span> to implement K-means clustering for customer segmentation and <span class="highlight">applied</span> advanced forecasting techniques (Moving Average, Simple Exponential Smoothing, Holt’s Linear) to predict future Customer Experience Scores, enhancing predictive accuracy by <span class="font-bold">10%</span>.</li>
+                        <li class="bullet-point"><span class="highlight">Ensured</span> code quality and reliability by <span class="highlight">creating</span> comprehensive unit tests using `pytest` and conducting thorough API testing with Postman.</li>
+                        <li class="bullet-point"><span class="highlight">Managed</span> version control with <span class="highlight">Git</span> and <span class="highlight">collaborated</span> extensively with architects to understand business requirements and develop APIs accordingly.</li>
+                        <li class="bullet-point"><span class="highlight">Played a pivotal role</span> in the successful completion of the initial two Minimum Viable Products (MVPs), providing end-to-end support and participating in product demonstrations for intellectual property and regulatory clearances.</li>
+                        <li class="bullet-point"><span class="highlight">Engineered</span> and <span class="highlight">optimized Python</span> programs for credit risk calculation, improving model accuracy by <span class="font-bold">10%</span> and reducing processing time by <span class="font-bold">5 hours</span> per run.</li>
+                        <li class="bullet-point"><span class="highlight">Implemented</span> complex calculation sequences to accurately determine probability of default and credit risk, supporting critical financial assessments.</li>
+                        <li class="bullet-point"><span class="highlight">Facilitated</span> seamless and secure data transitions between cross-functional teams, ensuring data consistency and accessibility.</li>
+                        <li class="bullet-point"><span class="highlight">Upgraded</span> server infrastructure to utilize LFTP protocol, enhancing security and efficiency of file transfers.</li>
+                        <li class="bullet-point"><span class="highlight">Operated</span> effectively within an Agile development environment, providing comprehensive end-to-end support for data solutions.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="mb-10 card">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Certifications</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>Databricks Data Engineer Associate</li>
-                <li>DP-203: Microsoft Certified Azure Data Engineer</li>
-                <li>AI-900: Microsoft AI Fundamentals</li>
-                <li>AZ-900: Microsoft Azure Fundamentals</li>
+        <section class="card">
+            <h2 class="section-header">Certifications</h2>
+            <ul class="space-y-2">
+                <li class="cert-item">Databricks Data Engineer Associate</li>
+                <li class="cert-item">DP-203: Microsoft Certified Azure Data Engineer</li>
+                <li class="cert-item">AI-900: Microsoft AI Fundamentals</li>
+                <li class="cert-item">AZ-900: Microsoft Azure Fundamentals</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Education</h2>
-            <p class="text-gray-700">
-                <span class="font-medium text-gray-900">B. Tech: Computer Science and Engineering</span><br>
+            <h2 class="section-header">Education</h2>
+            <p class="text-lg mb-1 text-gray-700">
+                <span class="font-bold text-gray-900">B. Tech: Computer Science and Engineering</span><br>
                 Dr. APJ Abdul Kalam Technical University | Moradabad, India<br>
-                <span class="text-gray-500 text-sm">2014 – 2018</span>
+                <span class="text-gray-500 text-base">2014 – 2018</span>
             </p>
         </section>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleContainers = document.querySelectorAll('.job-title-container');
+
+            toggleContainers.forEach(container => {
+                const targetId = container.dataset.target;
+                const targetContent = document.getElementById(targetId);
+                const icon = container.querySelector('.plus-minus-icon');
+
+                // Set initial state: all hidden except maybe first one if desired
+                targetContent.classList.add('hidden');
+                icon.textContent = '+'; // Ensure plus icon is visible initially
+
+                container.addEventListener('click', () => {
+                    const isHidden = targetContent.classList.contains('hidden');
+                    if (isHidden) {
+                        targetContent.classList.remove('hidden');
+                        icon.textContent = '−'; // Minus sign
+                    } else {
+                        targetContent.classList.add('hidden');
+                        icon.textContent = '+'; // Plus sign
+                    }
+                });
+            });
+
+            // Download functionality
+            const downloadResumeBtn = document.getElementById('downloadResumeBtn');
+            downloadResumeBtn.addEventListener('click', () => {
+                const htmlContent = document.documentElement.outerHTML;
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Apoorv_Mehrotra_Resume.html'; // Suggested filename
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url); // Clean up the URL object
+            });
+        });
+    </script>
 </body>
 </html>
